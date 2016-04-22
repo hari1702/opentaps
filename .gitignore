@@ -1,0 +1,6 @@
+.project
+target/*
+.settings/*
+drivers/*
+test-output/*
+.classpath

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="opentapsgroups" parallel="tests">
+  <groups>
+	<run>
+		<include name="Smoke"></include>
+		<include name="Sanity"></include>		
+	</run>
+  </groups>
+  <test name="lead">
+  <parameter name="Browser" value="chrome"></parameter>
+    <classes>
+      <class name="opentapsgroups.CreateLead"/>
+      <class name="opentapsgroups.EditLead"/>
+      <class name="opentapsgroups.DeleteLead"/>
+      <class name="opentapsgroups.MergeLead"/>
+    </classes>
+  </test> <!-- Test -->
+  
+  <test name="contact">
+  <parameter name="Browser" value="firefox"></parameter>
+    <classes>
+      <class name="opentapsgroups.CreateContact"/>
+      <class name="opentapsgroups.EditContact"/>
+      <class name="opentapsgroups.DeleteContact"/>
+      <class name="opentapsgroups.MergeContact"/>
+    </classes>
+  </test> <!-- Test -->
+  </suite> <!-- Suite -->

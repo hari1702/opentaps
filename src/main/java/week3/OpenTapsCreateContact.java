@@ -1,0 +1,60 @@
+package week3;
+
+import org.junit.Test;
+
+public class OpenTapsCreateContact extends WrapperClass {
+	
+@Test	
+	public void createContact(){
+		
+		//Open application
+		launchapp("firefox","http://demo1.opentaps.org/opentaps/control/main");
+		
+		//Enter Username and Password
+		enterById("username","DemoSalesManager");
+		enterByName("PASSWORD","crmsfa");
+		
+	    //Verify title
+		verifyTitle("Opentaps Open Source ERP + CRM");
+		
+		//Verify Url
+		verifyUrl("http://demo1.opentaps.org/opentaps/control/main");
+		
+		//Click Login Button
+		clickByClassName("decorativeSubmit");
+		
+		//Verify title
+		verifyTitle("Opentaps Open Source ERP + CRM");
+		
+		//Click crmsfa 
+		clickByXpath("//div[@class='crmsfa']/a[1]/img[1]");
+		
+		//Verify title
+		verifyTitle("My Home | opentaps CRM");
+		
+		//Click Create Account Link
+		clickByXpath("//div[@id='left-content-column']/div[1]/div[2]/ul[1]/li[3]/a[1]");		
+		
+		//Verify Title
+		verifyTitle("Create Contact | opentaps CRM");
+		
+		//Enter Account Name
+		enterById("firstNameField","Harsha");
+		
+		//Enter Local Name
+		enterById("lastNameField","H");
+		
+		//Select Ownership
+		enterByName("departmentName","CEO");
+		
+		//Click Submit Button
+		clickByName("submitButton");
+		
+		//Verify Title
+		verifyTitle("View Contact | opentaps CRM");
+		
+		//Verify Text
+		verifyText("sectionHeaderTitle_contacts","View Contact");
+	}
+
+}

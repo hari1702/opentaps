@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="opentapsparallel" parallel="classes" thread-count="2">
+  <test name="lead">
+    <classes>
+      <class name="opentaps.CreateLead"/>
+      <class name="opentaps.EditLead"/>
+      <class name="opentaps.DeleteLead"/>
+      <class name="opentaps.MergeLead"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
